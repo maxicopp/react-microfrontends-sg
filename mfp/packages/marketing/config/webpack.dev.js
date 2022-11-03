@@ -17,12 +17,13 @@ const devConfig = {
             filename: 'remoteEntry.js',
             exposes: {
                 './MarketingApp': './src/bootstrap'
-            }
+            },
+            shared: ['react', 'react-dom']
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
         })
-    ]
+    ],
 };
 
 module.exports = merge(commonConfig, devConfig);
